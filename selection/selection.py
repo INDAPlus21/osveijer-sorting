@@ -38,7 +38,10 @@ def main_sort(arr):
         j = i + 1
         rects = get_rects(arr)
         for l in range(j, len(arr)):
-            pygame.event.get()
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.display.quit()
+                    pygame.quit()
             draw_rects(rects)
             draw_highlights(i, l, rects)
             if arr[l] < arr[minIndex]:
