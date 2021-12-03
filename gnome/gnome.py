@@ -66,6 +66,7 @@ def main_sort(arr):
             draw_gnome(gnomePos)
             gnomePos -= 1
         pygame.time.wait(10)
+    draw_gnome(int(len(arr)/2))
     q()
 
 def q():
